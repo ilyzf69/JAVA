@@ -35,11 +35,10 @@ public class Exo7 {
 
     public static void main(String[] args) {
         clearConsole();
-        // Test du bon fonctionnement de la classe Exo7
         String[] articles = {"Article 1", "Article 2", "Article 3"};
         int[] quantites = {2, 1, 3};
-        Client client = new Client("Dupont", "Jean", "123 Rue de la Poste", 75001, "Paris");
-        Exo7 commande = new Exo7(1, "2021-01-01", client, articles, quantites);
+        Client client = new Client("Mirak", "Karim", "90 rue Parmentier", 69400, "Villefranche s/s");
+        Exo7 commande = new Exo7(1, "2023-07-12", client, articles, quantites);
         System.out.println("Numero de commande : " + commande.getNumero());
         System.out.println("Date de commande : " + commande.getDate());
         System.out.println("Client : " + commande.getClient().getNom() + " " + commande.getClient().getPrenom());
@@ -59,7 +58,6 @@ public class Exo7 {
                 System.out.flush();
             }
         } catch (final Exception e) {
-            // Ignorer les erreurs lors de l'effacement de l'affichage
         }
     }
 }
