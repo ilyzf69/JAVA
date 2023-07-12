@@ -16,7 +16,7 @@ public class DistributeurBillets {
 
     public void insererCarte() {
         System.out.println("--------------------------------------------------");
-        System.out.println("           DISTRIBUTEUR DDE BILLETS");
+        System.out.println("           DISTRIBUTEUR DE BILLETS");
         System.out.println("--------------------------------------------------");
         System.out.println("Bonjour " + prenom + " !");
         System.out.println("Insérez votre carte.");
@@ -123,50 +123,5 @@ public class DistributeurBillets {
         } catch (Exception e) {
             System.out.println("Erreur lors du nettoyage de la console.");
         }
-    }
-
-    public static void main(String[] args) {
-        DistributeurBillets distributeur = new DistributeurBillets("John Doe");
-        Scanner scanner = new Scanner(System.in);
-
-        distributeur.insererCarte();
-
-        boolean codeValide = false;
-        for (int i = 0; i < 3; i++) {
-            System.out.print("Veuillez entrer votre code : ");
-            int code = scanner.nextInt();
-            codeValide = distributeur.verifierCode(code);
-            if (codeValide) {
-                break;
-            }
-        }
-
-        if (codeValide) {
-            boolean sortir = false;
-            while (!sortir) {
-                distributeur.afficherMenu();
-                System.out.print("Votre choix : ");
-                int choix = scanner.nextInt();
-
-                switch (choix) {
-                    case 1:
-                        distributeur.retirerArgent(scanner);
-                        break;
-                    case 2:
-                        System.out.println("------------------------------");
-                        System.out.println("Sortie du distributeur.");
-                        sortir = true;
-                        break;
-                    default:
-                        System.out.println("------------------------------");
-                        System.out.println("Choix invalide !");
-                }
-                System.out.println();
-            }
-        }
-
-        System.out.println("------------------------------");
-        System.out.println("Au revoir !");
-        scanner.close();
     }
 }
