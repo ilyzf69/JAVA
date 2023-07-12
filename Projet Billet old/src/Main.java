@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        DistributeurBillets distributeur = new DistributeurBillets("John Doe");
+        DistributeurBillets distributeur = new DistributeurBillets("Ilyes Aïdoudi");
         Scanner scanner = new Scanner(System.in);
 
         distributeur.insererCarte();
 
         boolean codeValide = false;
         for (int i = 0; i < 3; i++) {
-            System.out.print("Veuillez entrer votre code : ");
+            System.out.print("Veuillez entrer vôtre code : ");
             int code = scanner.nextInt();
             codeValide = distributeur.verifierCode(code);
             if (codeValide) {
@@ -21,7 +21,7 @@ public class Main {
             boolean sortir = false;
             while (!sortir) {
                 distributeur.afficherMenu();
-                System.out.print("Votre choix : ");
+                System.out.print("Vôtre choix : ");
                 int choix = scanner.nextInt();
 
                 switch (choix) {

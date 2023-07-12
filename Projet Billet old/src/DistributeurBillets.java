@@ -19,7 +19,7 @@ public class DistributeurBillets {
         System.out.println("           DISTRIBUTEUR DE BILLETS");
         System.out.println("--------------------------------------------------");
         System.out.println("Bonjour " + prenom + " !");
-        System.out.println("Insérez votre carte.");
+        System.out.println("Insérez vôtre carte.");
     }
 
     public boolean verifierCode(int code) {
@@ -43,8 +43,8 @@ public class DistributeurBillets {
         System.out.println("           DISTRIBUTEUR DE BILLETS");
         System.out.println("--------------------------------------------------");
         System.out.println("Bonjour " + prenom + " !");
-        System.out.println("1. Retrait");
-        System.out.println("2. Sortir du distributeur");
+        System.out.println("[1]. Retrait");
+        System.out.println("[2]. Sortir du distributeur");
         afficherSolde();
     }
 
@@ -60,9 +60,9 @@ public class DistributeurBillets {
             if (choixConfirmation.equalsIgnoreCase("O")) {
                 System.out.println("------------------------------");
                 System.out.println("Veuillez choisir la coupure :");
-                System.out.println("1. Grosse coupure");
-                System.out.println("2. Petite coupure");
-                System.out.print("Votre choix : ");
+                System.out.println("[1]. Grosse coupure");
+                System.out.println("[2]. Petite coupure");
+                System.out.print("Vôtre choix : ");
                 int choixCoupure = scanner.nextInt();
 
                 if (choixCoupure == 1) {
