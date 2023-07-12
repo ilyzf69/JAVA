@@ -5,7 +5,7 @@ public class Exo6 {
     private int codePostal;
     private String ville;
 
-    public Exo6(String nom, String prenom, String adresse, int codePostal, String ville) {
+    public Exo6(String nom, String prenom, String adresse, int codePostagit l, String ville) {
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;

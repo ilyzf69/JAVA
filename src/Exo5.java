@@ -40,6 +40,7 @@ public class Exo5 {
         Exo5 article = new Exo5("REF001", "Article 1", 19.99);
         System.out.println("Article : " + article.getDesignation());
         System.out.println("Prix : " + article.getPrix());
+        System.out.println("Reference : " + article.getReference());
     }
 
     private static void clearConsole() {
