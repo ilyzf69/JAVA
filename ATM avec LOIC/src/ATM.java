@@ -30,6 +30,15 @@ public class ATM {
         account3.deposit(200.0);
         accounts.put(account3.getAccountNumber(), account3);
     }
+    public void run() {
+        displayAccountCreationPrompt();
+        enterAccountNumber();
+        while (true) {
+            displayMenu();
+            int choice = scanner.nextInt();
+            performAction(choice);
+        }
+    }
 
     public void displayMenu() {
     System.out.println("╔═════════════════════════════╗");
